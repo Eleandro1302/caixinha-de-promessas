@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #000000; 
-    color: #ffffff; 
+    background-color: #000000;
+    color: #ffffff;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -22,7 +22,7 @@ body {
 .container {
     text-align: center;
     padding: 20px;
-    background-color: #1a1a1a; 
+    background-color: #1a1a1a;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
@@ -31,20 +31,20 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #333333; 
-    color: #ffffff; 
+    background-color: #333333;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
 }
 
 button:hover {
-    background-color: #555555; 
+    background-color: #555555;
 }
 
 #promise-text {
     margin-top: 20px;
     font-size: 18px;
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 footer {
@@ -55,4 +55,22 @@ footer {
     position: absolute;
     bottom: 10px;
     width: 100%;
+}
+
+.share-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.share-buttons img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.share-buttons img:hover {
+    transform: scale(1.1);
 }
