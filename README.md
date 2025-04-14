@@ -1,7 +1,7 @@
 # Caixinha de Promessas
 
 ## English
-[Displays inspirational Bible verses](Animation-promessas.gif)
+![Displays inspirational Bible verses](Animation-promessas.gif)
 **Caixinha de Promessas** is a web application that displays inspirational Bible verses. Users can click a button to receive a random promise and share it on social media platforms like WhatsApp, Instagram, and Facebook.
 
 ### Features
