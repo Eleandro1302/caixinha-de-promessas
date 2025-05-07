@@ -37,7 +37,7 @@ loadPromisesFromXML();
 document.getElementById('new-promise').addEventListener('click', showRandomPromise);
 
 const shareOnInstagram = async () => {
-    const containerElement = document.querySelector('.container'); // Captura o contêiner inteiro
+    const containerElement = document.querySelector('.container'); 
     if (!containerElement) {
         alert('Nenhum conteúdo disponível para compartilhar.');
         return;
@@ -50,10 +50,10 @@ const shareOnInstagram = async () => {
     }
 
     try {
-        // Captura o contêiner inteiro como imagem
+        
         const canvas = await html2canvas(containerElement, {
-            backgroundColor: '#1a1a1a', // Fundo consistente
-            scale: 2 // Aumenta a resolução da imagem
+            backgroundColor: '#1a1a1a', 
+            scale: 2 
         });
 
         const context = canvas.getContext('2d');
@@ -64,7 +64,7 @@ const shareOnInstagram = async () => {
 
         const image = canvas.toDataURL('image/png');
 
-        // Cria um link para download da imagem
+        
         const link = document.createElement('a');
         link.href = image;
         link.download = 'promessa.png';
@@ -78,6 +78,6 @@ const shareOnInstagram = async () => {
 };
 
 document.getElementById('share-instagram').addEventListener('click', (event) => {
-    event.preventDefault(); // Evita o comportamento padrão do link
+    event.preventDefault(); 
     shareOnInstagram();
 });
