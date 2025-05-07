@@ -35,3 +35,30 @@ loadPromisesFromXML();
 
 
 document.getElementById('new-promise').addEventListener('click', showRandomPromise);
+
+const shareOnInstagram = async () => {
+    const promiseTextElement = document.getElementById('promise-text');
+    if (!promiseTextElement) return;
+
+    try {
+        const canvas = await html2canvas(promiseTextElement, {
+            backgroundColor: null 
+        });
+        const image = canvas.toDataURL('image/png');
+        
+        
+        const link = document.createElement('a');
+        link.href = image;
+        link.download = 'promessa.png';
+        link.click();
+        
+        alert('Imagem gerada! Compartilhe manualmente no Instagram.');
+    } catch (error) {
+        console.error('Erro ao capturar a promessa:', error);
+    }
+};
+
+document.getElementById('share-instagram').addEventListener('click', (event) => {
+    event.preventDefault(); 
+    shareOnInstagram();
+});
